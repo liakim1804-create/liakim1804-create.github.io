@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            color: white;
+            position: relative;
+            background-color: #000;
+            background-image: url('캐릭터 배경.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* 배경 오버레이 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.769); 
+            z-index: 0;
+        }
+
+        header {
+            width: 200px;
+            min-height: 100vh;
+            position: relative;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.075);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+
+        .home-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin-bottom: 40px;
+            transition: color 0.3s;
+            font-weight: 700;
+        }
+
+        .home-btn:hover {
+            color: #ffd700;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: calc(100vh - 20px - 40px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            width: 100%;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px 50px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        main h1 {
+            font-size: 60px;
+            margin-bottom: 80px;
+           text-shadow: 0 4px 8px rgba(0,0,0,0.7);
+        }
+
+        .card-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .card {
+            width: 300px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* 카드 이미지 */
+        .card-image {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .card-image img.default-img {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .card-image img.hover-img {
+            opacity: 0;
+            z-index: 2;
+        }
+
+        /* 이미지 호버 */
+        .card:hover img.default-img {
+            opacity: 0;
+        }
+
+        .card:hover img.hover-img {
+            opacity: 1;
+        }
+
+        /* 캐릭터 이름, 설명 */
+        .card-content {
+            text-align: center;
+            color: white;
+            max-width: 300px;
+        }
+
+        .card-content h2 {
+            margin-bottom: 20px; /* 이름과 설명 간격 */
+            color: #ffd700;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            line-height: 1.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-btn">Portal</a>
+        <nav>
+            <ul>
+                <li><a href="synopsis.html">Synopsis</a></li>
+                <li><a href="characters.html" style="color:#ffd700;">Characters</a></li>
+                <li><a href="Soundtrack.html">Soundtrack</a></li>
+                <li><a href="IconicQuotes.html">Iconic Quotes</a></li>
+                <li><a href="Other Mobvies.html">Other Movies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Characters</h1>
+
+        <div class="card-container">
+
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="마일스 전.jpg" class="default-img" alt="Miles Morales">
+                        <img src="마일스 후.jpg" class="hover-img" alt="Miles Morales Hover">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>Miles Morales</h2>
+                    <p>브루클린에서 평범한 삶을 살던 소년. 우연히 방사능 거미에게 물리면서 능력을 얻는다.
+                         처음에는 혼란과 두려움에 휘둘리지만 자신의 힘과 책임을 받아들이며 새로운 세대의 영웅으로 성장한다. 
+                         뛰어난 민첩성과 은신 능력, 전기 충격과 같은 독특한 능력으로 위기에 맞서며 자신의 정의와 가족, 친구를 지키기 위해 고군분투한다.</p>
+                </div>
+            </div>
+
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="피터 전.jpg" class="default-img" alt="Peter B. Parker">
+                        <img src="피터 후.jpg" class="hover-img" alt="Peter B. Parker Hover">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>Peter B. Parker</h2>
+                    <p>지구-616에서 온 여러 유니버스를 경험한 성숙한 스파이더맨으로, 전투와 전략에 능하지만 인간적인 약점과 허술함도 갖고 있다. 마일스를 만나 멘토 역할을 수행하며 
+                        경험을 통해 얻은 교훈과 책임감을 전달한다. 스파이더맨이라면 누구나 겪는 아픈 과거로 좌절도 하였지만 히어로로서의 진정한 면모를 보여주며 새로운 세대에게 영감을 준다.</p>
+                </div>
+            </div>
+
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="그웬 전.jpg" class="default-img" alt="Gwen Stacy">
+                        <img src="그웬 후.jpg" class="hover-img" alt="Gwen Stacy Hover">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2>Gwen Stacy</h2>
+                    <p>지구-65에서 온 독립적이고 강인한 스파이더우먼. 
+                        뛰어난 민첩성과 전투 실력으로 어떤 위기에도 침착하게 대응하며 정의감과 용기를 잃지 않는다. 음악 활동을 좋아하는 등
+                         단순한 전투 능력을 넘어 개성과 매력이 살아있다. 마일스와 함께 팀을 이루며 정의와 우정 사이에서 갈등한다.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

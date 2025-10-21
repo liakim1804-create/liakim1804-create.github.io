@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soundtrack</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
+    body {
+        font-family: 'Pretendard', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        color: white;
+        position: relative;
+        background-color: #000;
+        background-image: url('사운드트랙 배경.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.769);
+        z-index: 0;
+    }
+
+    header {
+        width: 200px;
+        min-height: 100vh;
+        position: relative;
+        padding: 20px;
+        background: rgba(255,255,255,0.075);
+        backdrop-filter: blur(5px);
+        z-index: 1;
+    }
+
+    .home-btn {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin-bottom: 40px;
+        transition: color 0.3s;
+        font-weight: 700;
+    }
+
+    .home-btn:hover {
+        color: #ffd700;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 20px - 40px);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ffd700;
+    }
+
+    main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center; /* 세로 중앙 */
+        justify-content: flex-start;
+        padding: 80px 50px;
+        position: relative;
+        z-index: 1;
+        gap: 80px;
+    }
+
+    .title-col {
+        font-size: 60px;
+        font-weight: 800;
+        text-shadow: 0 4px 8px rgba(0,0,0,0.7);
+        flex-shrink: 0;
+    }
+
+    .ost-col {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .ost-item {
+        display: flex;
+        align-items: center; /* 높이 맞춰서 텍스트 옆에 위치 */
+        gap: 40px;
+    }
+
+    .ost-item video {
+        width: 400px;
+        height: 225px; /* 16:9 고정 */
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        flex-shrink: 0;
+    }
+
+    .ost-text {
+        max-width: 600px;
+    }
+
+    .ost-text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+        color: #ffd700;
+    }
+
+    .ost-text p {
+        font-size: 14px;
+        line-height: 1.8;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    @media (max-width: 1200px) {
+        main {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .title-col {
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+        .ost-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .ost-item video {
+            width: 100%;
+            height: auto;
+        }
+        .ost-text {
+            max-width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="home-btn">Portal</a>
+    <nav>
+        <ul>
+            <li><a href="synopsis.html">Synopsis</a></li>
+            <li><a href="Characters.html">Characters</a></li>
+            <li><a href="Soundtrack.html" style="color:#ffd700;">Soundtrack</a></li>
+            <li><a href="IconicQuotes.html">Iconic Quotes</a></li>
+            <li><a href="Other Movies.html">Other Movies</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- 제목 -->
+    <div class="title-col">Soundtrack</div>
+
+    <!-- 동영상+텍스트 -->
+    <div class="ost-col">
+        <!-- OST 1 -->
+        <div class="ost-item">
+            <video src="sunflower.mp4" controls></video>
+            <div class="ost-text">
+                <h2>Sunflower - Post Malone</h2>
+                <p>밝고 서정적인 멜로디와 세련된 트랩 리듬이 조화를 이루는 곡으로 33주 동안 빌보드 핫 100 10위 안에 들었다. 
+                    경쾌한 편곡과 반복적인 후렴구는 마일스의 성장과 활기찬 거리를 감각적으로 담아낸다.</p>
+            </div>
+        </div>
+
+        <!-- OST 2 -->
+        <div class="ost-item">
+            <video src="Scared of the Dark.mp4" controls></video>
+            <div class="ost-text">
+                <h2>Scared of the Dark - Lil Wayne</h2>
+                <p>어두운 분위기 속 긴장감과 내적 갈등을 담아낸 곡으로 묵직한 비트와 감성적인 멜로디, 강렬한 보컬이 돋보인다.
+                마일스가 스파이더맨으로서의 정체성을 받아들이고 성장하는 과정을 그린 감동적인 장면에 삽입되어 큰 인기를 끌었다.</p>
+            </div>
+        </div>
+
+        <!-- OST 3 -->
+        <div class="ost-item">
+            <video src="monalisa.mp4" controls></video>
+            <div class="ost-text">
+                <h2>Mona Lisa - Dominic Fike</h2>
+                <p>부드러운 기타와 미니멀한 비트 위에 특유의 자유로운 보컬과 랩이 어우러진 곡으로 
+                    사랑과 관계의 미묘한 감정을 솔직하게 담아낸 인디 팝 트랙이다. 밝고 청량한 분위기와 감각적인 멜로디가 돋보이는 곡이다.</p>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+
