@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 페이지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', sans-serif;
+            height: 100vh;
+            background-image: url('메인 배경.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+      header {
+            display: flex;
+            justify-content: center; /* 중앙 정렬 */
+            align-items: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.4); /* 투명 헤더 */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 160px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700; /* 호버 시 색깔 바뀜 */
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        main h1 {
+            font-size: 72px;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 24px;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        }
+
+main {
+    z-index: 1; /* 글자가 배경보다 위 */
+}
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-align: center;
+    z-index: 1;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="synopsis.html">Synopsis</a></li>
+                <li><a href="Characters.html">Characters</a></li>
+                <li><a href="Soundtrack.html">Soundtrack</a></li>
+                <li><a href="IconicQuotes.html">Iconic Quotes</a></li>
+                <li><a href="Other Movies.html">Other Movies</a></li>
+
+            </ul>
+           <main><h1>MY MOVIE MULTIVERSE</h1>
+    <p>Spider-Man : Into the Spider-Verse</p></main> 
+            </body>
+</html>
